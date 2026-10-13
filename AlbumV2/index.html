@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ALBUM — memories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <!-- Opening screen -->
+        <section class="opening-screen" id="home">
+
+            <div class="opening-doodle opening-star">✳</div>
+            <div class="opening-doodle opening-heart">♡</div>
+            <div class="opening-doodle opening-flower">✿</div>
+            <div class="opening-doodle opening-spark">✦</div>
+
+            <div class="opening-photo opening-photo-1">
+                <img src="images/home1.jpg" alt="お気に入りの風景">
+            </div>
+
+            <div class="opening-photo opening-photo-2">
+                <img src="images/home2.jpg" alt="好きなもの">
+            </div>
+
+            <div class="opening-photo opening-photo-3">
+                <img src="images/home3.jpg" alt="日常の一枚">
+            </div>
+
+            <div class="opening-photo opening-photo-4">
+                <img src="images/home4.jpg" alt="思い出の写真">
+            </div>
+
+            <div class="opening-content">
+                <p class="opening-subtitle">A LITTLE INTRODUCTION</p>
+
+                <h1>
+                    Hello,<br>
+                    <span>I'm Anzu.</span>
+                </h1>
+
+                <p class="opening-description">
+                    A little introduction to my world.
+                </p>
+
+                <div class="opening-underline"></div>
+
+                <a href="#album" class="opening-scroll">
+                    <span>GET TO KNOW ME</span>
+                    <span class="opening-arrow">↓</span>
+                </a>
+            </div>
+
+        </section>
+
+        <button
+            class="scroll-menu-button"
+            id="menuButton"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+            aria-controls="scrollMenu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="scroll-menu" id="scrollMenu">
+            <a href="#album">Archive</a>
+            <a href="#album-f">Anzu's Friends</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <!-- Album -->
+        <section class="section" id="album">
+
+            <div class="section-head">
+
+                <h2>Anzu's Archive</h2>
+
+                <span>
+                    24 photographs
+                </span>
+
+            </div>
+
+
+            <div class="grid">
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 01"
+                    data-image="images/photo01.jpg">
+
+                    <div class="fake p1">
+                        <img class="photo-image"
+                            src="images/photo01.jpg"
+                            alt="photo01">
+                    </div>
+
+                    <div class="caption">ANZU / 01</div>
+                    <div class="date">2026 / 09 / 05</div>
+
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 02"
+                    data-image="images/photo02.jpg">
+
+                    <div class="fake p2">
+                        <img src="images/photo02.jpg" alt="photo02">
+                    </div>
+
+                    <div class="caption">ANZU / 02</div>
+                    <div class="date">2026 / 10 / 01</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 03"
+                    data-image="images/photo03.jpg">
+                    <div class="fake p3">
+                        <img src="images/photo03.jpg" alt="photo03">
+                    </div>
+
+                    <div class="caption">ANZU / 03</div>
+                    <div class="date">2026 / 09 / 05</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 04"
+                    data-image="images/photo04.png">
+                    <div class="fake p4">
+                        <img src="images/photo04.png" alt="photo04">
+                    </div>
+
+                    <div class="caption">ANZU / 04</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 05"
+                    data-image="images/photo05.jpg">
+                    <div class="fake p5">
+                        <img src="images/photo05.jpg" alt="photo05">
+                    </div>
+
+                    <div class="caption">ANZU / 05</div>
+                    <div class="date">2026 / 10 / 03</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 06"
+                    data-image="images/photo06.jpg">
+                    <div class="fake p6">
+                        <img src="images/photo06.jpg" alt="photo06">
+                    </div>
+
+                    <div class="caption">ANZU / 06</div>
+                    <div class="date">2026 / 09 / 20</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 07"
+                    data-image="images/photo07.jpg">
+                    <div class="fake p7">
+                        <img src="images/photo07.jpg" alt="photo07">
+                    </div>
+
+                    <div class="caption">ANZU / 07</div>
+                    <div class="date">2026 / 09 / 05</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 08"
+                    data-image="images/photo08.jpg">
+                    <div class="fake p8">
+                        <img src="images/photo08.jpg" alt="photo08">
+                    </div>
+
+                    <div class="caption">ANZU / 08</div>
+                    <div class="date">2026 / 09 / 05</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 09"
+                    data-image="images/photo09.jpg">
+                    <div class="fake p9">
+                        <img src="images/photo09.jpg" alt="photo09">
+                    </div>
+
+                    <div class="caption">ANZU / 09</div>
+                    <div class="date">2026 / 10 / 08</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 10"
+                    data-image="images/photo10.jpg">
+                    <div class="fake p10">
+                        <img src="images/photo10.jpg" alt="photo10">
+                    </div>
+
+                    <div class="caption">ANZU / 10</div>
+                    <div class="date">2026 / 10 / 08</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 11"
+                    data-image="images/photo11.jpg">
+                    <div class="fake p11">
+                        <img src="images/photo11.jpg" alt="photo11">
+                    </div>
+
+                    <div class="caption">ANZU / 11</div>
+                    <div class="date">2026 / 10 / 08</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 12"
+                    data-image="images/photo12.jpg">
+                    <div class="fake p12">
+                        <img src="images/photo12.jpg" alt="photo12">
+                    </div>
+
+                    <div class="caption">ANZU / 12</div>
+                    <div class="date">2026 / 10 / 08</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 13"
+                    data-image="images/photo13.jpg">
+                    <div class="fake p13">
+                        <img src="images/photo13.jpg" alt="photo13">
+                    </div>
+
+                    <div class="caption">ANZU / 13</div>
+                    <div class="date">2026 / 10 / 08</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 14"
+                    data-image="images/photo14.jpg">
+                    <div class="fake p14">
+                        <img src="images/photo14.jpg" alt="photo14">
+                    </div>
+
+                    <div class="caption">ANZU / 14</div>
+                    <div class="date">2026 / 10 / 10</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 15"
+                    data-image="images/photo15.jpg">
+                    <div class="fake p15">
+                        <img src="images/photo15.jpg" alt="photo15">
+                    </div>
+
+                    <div class="caption">ANZU / 15</div>
+                    <div class="date">2026 / 10 / 10</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 16"
+                    data-image="images/photo16.jpg">
+                    <div class="fake p16">
+                        <img src="images/photo16.jpg" alt="photo16">
+                    </div>
+
+                    <div class="caption">ANZU / 16</div>
+                    <div class="date">2026 / 10 / 10</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 17"
+                    data-image="images/photo17.jpg">
+                    <div class="fake p17">
+                        <img src="images/photo17.jpg" alt="photo17">
+                    </div>
+
+                    <div class="caption">ANZU / 17</div>
+                    <div class="date">2026 / 10 / 10</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 18"
+                    data-image="images/photo18.jpg">
+                    <div class="fake p18">
+                        <img src="images/photo18.jpg" alt="photo18">
+                    </div>
+
+                    <div class="caption">ANZU / 18</div>
+                    <div class="date">2026 / 10 / 10</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 19"
+                    data-image="images/photo19.jpg">
+                    <div class="fake p19">
+                        <img src="images/photo19.jpg" alt="photo19">
+                    </div>
+
+                    <div class="caption">ANZU / 19</div>
+                    <div class="date">2026 / 10 / 11</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 20"
+                    data-image="images/photo20.jpg">
+                    <div class="fake p20">
+                        <img src="images/photo20.jpg" alt="photo20">
+                    </div>
+
+                    <div class="caption">ANZU / 20</div>
+                    <div class="date">2026 / 10 / 11</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 21"
+                    data-image="images/photo21.jpg">
+                    <div class="fake p21">
+                        <img src="images/photo21.jpg" alt="photo21">
+                    </div>
+
+                    <div class="caption">ANZU / 21</div>
+                    <div class="date">2026 / 10 / 11</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 22"
+                    data-image="images/photo22.jpg">
+                    <div class="fake p22">
+                        <img src="images/photo22.jpg" alt="photo22">
+                    </div>
+
+                    <div class="caption">ANZU / 22</div>
+                    <div class="date">2026 / 10 / 12</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 23"
+                    data-image="images/photo23.jpg">
+                    <div class="fake p23">
+                        <img src="images/photo23.jpg" alt="photo23">
+                    </div>
+
+                    <div class="caption">ANZU / 23</div>
+                    <div class="date">2026 / 10 / 12</div>
+                </div>
+
+                <div class="photo"
+                    data-title="ANZU-PHOTO / 24"
+                    data-image="images/photo24.jpg">
+                    <div class="fake p24">
+                        <img src="images/photo24.jpg" alt="photo24">
+                    </div>
+
+                    <div class="caption">ANZU / 24</div>
+                    <div class="date">2026 / 10 / 12</div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section" id="album-f">
+            <div class="section-head">
+
+                <h2>Archive of Anzu with Friends</h2>
+
+                <span>
+                    9 photographs
+                </span>
+
+            </div>
+
+            <div class="grid">
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 1"
+                    data-image="images/photo-f1.jpg">
+                    <div class="fake pf1">
+                        <img src="images/photo-f1.jpg" alt="photo-friends1">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 1</div>
+                    <div class="date">2026 / 08 / 10</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 2"
+                    data-image="images/photo-f2.jpg">
+                    <div class="fake pf2">
+                        <img src="images/photo-f2.jpg" alt="photo-friends2">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 2</div>
+                    <div class="date">2026 / 08 / 10</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 3"
+                    data-image="images/photo-f3.jpg">
+                    <div class="fake pf3">
+                        <img src="images/photo-f3.jpg" alt="photo-friends3">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 3</div>
+                    <div class="date">2026 / 08 / 11</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 4"
+                    data-image="images/photo-f4.jpg">
+                    <div class="fake pf4">
+                        <img src="images/photo-f4.jpg" alt="photo-friends4">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 4</div>
+                    <div class="date">2026 / 08 / 17</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 5"
+                    data-image="images/photo-f5.jpg">
+                    <div class="fake pf5">
+                        <img src="images/photo-f5.jpg" alt="photo-friends5">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 5</div>
+                    <div class="date">2026 / 08 / 21</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 6"
+                    data-image="images/photo-f6.jpg">
+                    <div class="fake pf6">
+                        <img src="images/photo-f6.jpg" alt="photo-friends6">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 6</div>
+                    <div class="date">2026 / 08 / 21</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 7"
+                    data-image="images/photo-f7.jpg">
+                    <div class="fake pf7">
+                        <img src="images/photo-f7.jpg" alt="photo-friends7">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 7</div>
+                    <div class="date">2026 / 08 / 23</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 8"
+                    data-image="images/photo-f8.jpg">
+                    <div class="fake pf8">
+                        <img src="images/photo-f8.jpg" alt="photo-friends8">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 8</div>
+                    <div class="date">2026 / 08 / 23</div>
+                </div>
+
+                <div class="photo-f"
+                    data-title="ANZU-FRIEND / 9"
+                    data-image="images/photo-f9.jpg">
+                    <div class="fake pf9">
+                        <img src="images/photo-f9.jpg" alt="photo-friends9">
+                    </div>
+
+                    <div class="caption">ANZU FRIEND / 9</div>
+                    <div class="date">2026 / 10 / 12</div>
+                </div>
+            </div>
+            
+        </section>
+        
+
+        <section class="memory-game" id="photo-memory">
+            <div class="memory-game-head">
+                <span class="memory-eyebrow">A LITTLE MEMORY GAME</span>
+                <h2>PHOTO MEMORY</h2>
+                <p>Remember the photos. Find their places.</p>
+            </div>
+
+            <div class="memory-panel">
+                <div class="memory-status">
+                    <span>ROUND <strong id="memoryRound">1</strong></span>
+                    <span>SCORE <strong id="memoryScore">0</strong></span>
+                    <span>PHOTOS <strong id="memoryCount">3</strong></span>
+                </div>
+
+                <p class="memory-instruction" id="memoryInstruction">
+                    写真の位置を覚えよう。
+                </p>
+
+                <p class="memory-countdown" id="memoryCountdown" aria-live="off" hidden>
+                    05
+                </p>
+
+                <div class="memory-target-wrap" id="memoryTargetWrap" hidden>
+                    <span class="memory-target-label">FIND THIS PHOTO</span>
+                    <img id="memoryTarget" src="" alt="位置を探す写真">
+                </div>
+
+                <div class="memory-board" id="memoryBoard"></div>
+
+                <p class="memory-feedback" id="memoryFeedback" aria-live="polite">
+                    STARTを押してゲームを始めよう。
+                </p>
+
+                <button class="memory-button" id="memoryStart" type="button">
+                    START GAME
+                </button>
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section class="note" id="about">
+
+            <p>
+                “Not every moment has to be extraordinary
+                to be worth remembering.”
+            </p>
+
+            <small>
+                KEEP WHAT YOU WANT TO REMEMBER
+            </small>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <span>© 2026 ALBUM<br>ver 4.2.0</span>
+
+            <span>
+                MADE FOR MEMORIES
+            </span>
+
+        </footer>
+
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-card">
+                <button class="close" aria-label="閉じる">×</button>
+
+                <button class="lightbox-nav prev"
+                        id="prevPhoto"
+                        aria-label="前の写真">‹</button>
+
+                <div class="lightbox-art" id="lightboxArt"></div>
+
+                <button class="lightbox-nav next"
+                        id="nextPhoto"
+                        aria-label="次の写真">›</button>
+
+                <div class="lightbox-meta" id="lightboxMeta"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="memory-screen" id="memoryScreen">
+        <div class="memory-inner">
+
+            <div class="memory-kicker">A SECRET GAME / 001</div>
+
+            <h1 class="memory-title">MEMORY<br>SEQUENCE</h1>
+
+            <p class="memory-description">
+                Remember the order of the photographs.<br>
+                小さく光る写真の順番を記憶しよう。
+            </p>
+
+            <button class="memory-start" id="secretGameStart">
+                START GAME
+            </button>
+            <button id="exitGame">Exit Game</button>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
