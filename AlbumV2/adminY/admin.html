@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Album Admin</title>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main>
+  <h1>Album Admin</h1>
+  <p class="muted">Private management page</p>
+
+  <section class="panel" id="loginPanel">
+    <h2>ログイン</h2>
+    <form id="loginForm">
+      <label for="password">管理者パスワード</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+      <button type="submit">ログイン</button>
+    </form>
+  </section>
+
+  <div id="status" role="status"></div>
+
+  <section id="dashboard" class="hidden">
+
+  <div class="dashboard-actions">
+    <button type="button" id="refreshButton">一覧を更新</button>
+    <button type="button" id="logoutButton" class="secondary">ログアウト</button>
+  </div>
+
+  <div class="tabs">
+    <button
+      type="button"
+      class="tab-button active"
+      data-tab="commentsPanel">
+      コメント管理
+    </button>
+
+    <button
+      type="button"
+      class="tab-button"
+      data-tab="likesPanel">
+      いいね管理
+    </button>
+  </div>
+
+  <section id="commentsPanel" class="tab-panel active">
+    <h2>コメント管理</h2>
+    <div id="comments"></div>
+  </section>
+
+  <section id="likesPanel" class="tab-panel">
+    <h2>いいね管理</h2>
+
+    <div class="likes-summary">
+        <h3>人気の写真</h3>
+        <p class="muted">いいね数の多い順</p>
+        <div id="likesRanking"></div>
+    </div>
+
+    <h3>すべての写真</h3>
+    <div id="likes"></div>
+    </section>
+
+</section>
+</main>
+
+<script src="admin.js" defer></script>
+</body>
+</html>
