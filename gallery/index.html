@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>GALLERY — moments</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <header class="header">
+      <a class="logo" href="../index.html">PORTAL<span>.</span></a>
+      <nav class="nav">
+        <a href="#gallery">GALLERY</a>
+        <a href="#about">ABOUT</a>
+      </nav>
+      <span class="header-caption">A PLACE FOR MOMENTS</span>
+    </header>
+
+    <main>
+      <!-- 写真が0枚のとき -->
+      <section class="empty-state" id="emptyState">
+        <div class="empty-decoration empty-decoration-one"></div>
+        <div class="empty-decoration empty-decoration-two"></div>
+
+        <div class="empty-content">
+          <span class="eyebrow">A QUIET PHOTO EXHIBITION</span>
+          <h1>A space<br>for <i>moments.</i></h1>
+          <p>
+            日々の中にある、小さな瞬間を集めた写真展。<br>
+            ここに、これからの景色が並んでいきます。
+          </p>
+          <div class="empty-bottom">
+            <span>THE EXHIBITION IS WAITING</span>
+            <span class="empty-line"></span>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 写真が1枚以上あるとき -->
+      <section class="gallery-state" id="galleryState" hidden>
+        <section class="gallery-hero">
+          <div class="gallery-hero-copy">
+            <span class="eyebrow">A COLLECTION OF MOMENTS</span>
+            <h1>Everyday,<br><i>beautifully.</i></h1>
+            <p>何気ない日々の中にある、忘れたくない景色。</p>
+          </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">THE EXHIBITION</span>
+              <h2>Selected moments.</h2>
+            </div>
+            <span class="photo-count" id="photoCount"></span>
+          </div>
+
+          <div class="photo-grid" id="photoGrid"></div>
+        </section>
+      </section>
+
+      <!-- 共通ABOUT -->
+      <section class="about-section" id="about">
+        <span class="eyebrow">ABOUT THIS PLACE</span>
+        <p>
+          Some moments are too beautiful<br>
+          to be forgotten.
+        </p>
+        <span class="about-caption">A PLACE TO KEEP THE MOMENTS</span>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 GALLERY</span>
+      <span>COLLECTING LITTLE MOMENTS.</span>
+    </footer>
+  </div>
+
+  <!-- 写真拡大表示 -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="閉じる">×</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption">
+        <span id="lightboxTitle"></span>
+        <span id="lightboxDate"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

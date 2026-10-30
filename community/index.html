@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMMUNITY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ambient"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✳</span>
+      COMMUNITY
+    </div>
+
+    <div class="top-actions">
+      <span class="status">● SYSTEM ONLINE</span>
+      <div class="avatar">A</div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- 左側メニュー -->
+    <aside class="left-sidebar">
+
+      <section class="panel profile-mini">
+        <div class="profile-top">
+          <div class="avatar">A</div>
+          <div>
+            <strong id="sideName">Guest</strong>
+            <div class="handle">@guest</div>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div><b id="profilePostCount">0</b><span>POSTS</span></div>
+          <div><b id="profileFriendCount">0</b><span>FRIENDS</span></div>
+          <div><b id="profileLikeCount">0</b><span>LIKES</span></div>
+        </div>
+      </section>
+
+      <nav class="panel nav-panel">
+        <button class="nav-item active" data-view="feed">⌂ ホーム / Feed</button>
+        <button class="nav-item" data-view="profile">◉ プロフィール</button>
+        <button class="nav-item" data-view="messages">▤ メッセージ</button>
+        <button class="nav-item" data-view="games">◇ ゲーム</button>
+      </nav>
+
+      <section class="panel friend-list">
+        <div class="side-label">FRIENDS</div>
+        <div class="friend-items"></div>
+      </section>
+
+    </aside>
+
+    <!-- 中央コンテンツ -->
+    <main>
+
+      <!-- フィード -->
+      <section class="view active" id="feedView">
+
+        <div class="welcome">
+          <div class="eyebrow">YOUR COMMUNITY / 001</div>
+          <h1>Good to see you.</h1>
+          <p>友達の近況を見たり、何気ないことを共有したり。ここを、みんなの小さな居場所に。</p>
+        </div>
+
+        <div class="feed-head">
+          <h2>Latest updates</h2>
+          <span>YOUR TIMELINE</span>
+        </div>
+
+        <section class="composer">
+          <div class="compose-row">
+            <div class="avatar">A</div>
+            <textarea id="postText" placeholder="今なにしてる？ 気軽にシェアしてみよう。"></textarea>
+          </div>
+
+          <div class="compose-bottom">
+            <div class="compose-tools">
+                <button class="tool-btn" id="photoTool">＋ 写真</button>
+                <button class="tool-btn" id="moodTool">✧ 気分</button>
+            </div>
+            <button class="primary-btn" id="publishBtn">投稿する ↗</button>
+        </div>
+        </section>
+
+        <div id="posts"></div>
+
+      </section>
+
+      <!-- プロフィール -->
+      <section class="view" id="profileView">
+        <div class="panel profile-view">
+          <div class="profile-banner"></div>
+          <div class="profile-large">
+            <div class="avatar">A</div>
+            <div>
+              <h2 id="profileName">Guest</h2>
+              <div class="handle">@guest</div>
+            </div>
+          </div>
+          <p>ここにプロフィールを表示します。</p>
+        </div>
+      </section>
+
+      <!-- メッセージ -->
+      <section class="view" id="messagesView">
+        <div class="welcome">
+          <div class="eyebrow">MESSAGES</div>
+          <h1>Stay connected.</h1>
+          <p>友達との会話も、ここから。</p>
+        </div>
+        <div class="panel empty-note">
+          メッセージ機能は今後追加予定です。
+        </div>
+      </section>
+
+      <!-- ゲーム -->
+      <section class="view" id="gamesView">
+        <div class="welcome">
+          <div class="eyebrow">PLAY TOGETHER</div>
+          <h1>Let's play.</h1>
+          <p>友達と集まって、ちょっと遊べる場所。</p>
+        </div>
+        <div class="panel empty-note">
+          ゲーム機能は今後追加予定です。
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右側メニュー -->
+    <aside class="right-sidebar">
+      <section class="panel right-card">
+        <h3>COMMUNITY NOTE</h3>
+        <p>ここはみんなの場所。気軽に使ってみよう。</p>
+      </section>
+
+      <section class="panel right-card">
+        <h3>COMING SOON</h3>
+        <p>Friend requests</p>
+        <p>Online games</p>
+      </section>
+    </aside>
+
+  </div>
+
+  <!-- ログイン画面 -->
+  <div class="modal-backdrop open" id="loginModal">
+    <div class="modal">
+      <div class="brand">
+        <span class="brand-mark">✳</span>
+        COMMUNITY
+      </div>
+
+      <h2>Welcome to your space.</h2>
+      <p>あなたのアカウントでログインしてください。</p>
+
+      <label class="field">
+        <span>USERNAME</span>
+        <input id="loginName" placeholder="ユーザーネーム">
+      </label>
+
+      <label class="field">
+        <span>PASSWORD</span>
+        <input id="loginPassword" type="password" placeholder="パスワード">
+      </label>
+
+      <div class="modal-actions">
+        <button class="ghost-btn" id="signupBtn">アカウント作成</button>
+        <button class="primary-btn" id="loginBtn">ログイン →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

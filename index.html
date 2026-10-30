@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>PORTAL — Explore Beyond</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+  </div>
+
+  <header>
+    <a href="#" class="logo">
+      <span class="logo-mark"></span>
+      PORTAL
+    </a>
+
+    <nav class="header-right">
+      <a href="#destinations">EXPLORE</a>
+      <a href="./admin/admin.html">ADMIN ↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 最初の画面 -->
+
+    <section class="hero">
+      <div class="hero-content">
+
+        <div class="hero-heading">
+          <div class="eyebrow">A NEW DIGITAL SPACE</div>
+
+          <h1>
+            Explore <span>Beyond.</span>
+          </h1>
+
+          <p class="hero-description">
+            THREE SPACES. ONE PORTAL. ENDLESS POSSIBILITIES.
+          </p>
+        </div>
+
+        <div class="portal-grid">
+
+          <a href="./album/index.html" class="portal-card">
+            <div class="card-top">
+              <span class="card-number">01 / ARCHIVE</span>
+              <div class="card-icon">◈</div>
+            </div>
+
+            <div class="card-bottom">
+              <div>
+                <h2 class="card-title">ALBUM</h2>
+                <p class="card-subtitle">Memories, captured and preserved.</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </div>
+          </a>
+
+          <a href="./gallery/index.html" class="portal-card">
+            <div class="card-top">
+              <span class="card-number">02 / COLLECTION</span>
+              <div class="card-icon">▧</div>
+            </div>
+
+            <div class="card-bottom">
+              <div>
+                <h2 class="card-title">GALLERY</h2>
+                <p class="card-subtitle">Discover something beautiful.</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </div>
+          </a>
+
+          <a href="./community/index.html" class="portal-card">
+            <div class="card-top">
+              <span class="card-number">03 / CONNECTION</span>
+              <div class="card-icon">⌘</div>
+            </div>
+
+            <div class="card-bottom">
+              <div>
+                <h2 class="card-title">COMMUNITY</h2>
+                <p class="card-subtitle">A different kind of connection.</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </div>
+          </a>
+
+        </div>
+
+        <a href="#destinations" class="scroll-cue">
+          <span>SCROLL TO DISCOVER</span>
+          <span class="scroll-line"></span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 各サイトの紹介 -->
+
+    <section class="details" id="destinations">
+
+      <div class="section-intro reveal">
+        <span>DISCOVER OUR SPACES</span>
+        <h2>Find your destination.</h2>
+        <p>
+          Every space has its own purpose.<br>
+          Explore and find something new.
+        </p>
+      </div>
+
+      <!-- ALBUM -->
+
+      <section class="destination reveal" id="album-info">
+
+        <div class="destination-visual">
+          <div class="visual-orbit"></div>
+          <div class="visual-core">◈</div>
+          <span class="visual-label">PHOTO & VIDEO ARCHIVE</span>
+        </div>
+
+        <div class="destination-copy">
+          <span class="number">01 / ARCHIVE</span>
+          <h3>ALBUM</h3>
+          <p>
+            Memories deserve to be kept.<br>
+            A place to revisit photographs,
+            videos and moments that matter.
+          </p>
+          <a href="./album/index.html" class="destination-link">
+            EXPLORE ALBUM <span>↗</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- GALLERY -->
+
+      <section class="destination reveal" id="gallery-info">
+
+        <div class="destination-visual">
+          <div class="visual-orbit"></div>
+          <div class="visual-core">▧</div>
+          <span class="visual-label">VISUAL COLLECTION</span>
+        </div>
+
+        <div class="destination-copy">
+          <span class="number">02 / COLLECTION</span>
+          <h3>GALLERY</h3>
+          <p>
+            Discover something beautiful.<br>
+            Explore images, stories and
+            collections gathered in one place.
+          </p>
+          <a href="./gallery/index.html" class="destination-link">
+            EXPLORE GALLERY <span>↗</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- COMMUNITY -->
+
+      <section class="destination reveal" id="community-info">
+
+        <div class="destination-visual">
+          <div class="visual-orbit"></div>
+          <div class="visual-core">⌘</div>
+          <span class="visual-label">PEOPLE & IDEAS</span>
+        </div>
+
+        <div class="destination-copy">
+          <span class="number">03 / CONNECTION</span>
+          <h3>COMMUNITY</h3>
+          <p>
+            A different kind of connection.<br>
+            Meet people, exchange ideas
+            and discover new perspectives.
+          </p>
+          <a href="./community/index.html" class="destination-link">
+            EXPLORE COMMUNITY <span>↗</span>
+          </a>
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-logo">PORTAL</span>
+    <span>THREE SPACES / ONE PORTAL</span>
+    <span>© 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
