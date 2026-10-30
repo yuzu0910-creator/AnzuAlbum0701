@@ -1,0 +1,302 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADMIN</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main>
+  <h1>ADMIN</h1>
+  <p class="muted">Site Management</p>
+
+  <!-- ログイン -->
+  <section class="panel" id="loginPanel">
+    <h2>ログイン</h2>
+    <form id="loginForm">
+      <label for="password">管理者パスワード</label>
+      <input
+        id="password"
+        type="password"
+        autocomplete="current-password"
+        required
+      >
+      <button type="submit">ログイン</button>
+    </form>
+  </section>
+
+  <div id="status" role="status"></div>
+
+  <!-- 管理画面 -->
+  <section id="dashboard" class="hidden">
+
+    <div class="dashboard-actions">
+      <button type="button" id="refreshButton">一覧を更新</button>
+      <button type="button" id="logoutButton" class="secondary">
+        ログアウト
+      </button>
+    </div>
+
+    <!-- 第1階層：サイト選択 -->
+    <div class="site-tabs">
+      <button
+        type="button"
+        class="site-tab-button active"
+        data-site="albumSite"
+      >
+        ALBUM
+      </button>
+
+      <button
+        type="button"
+        class="site-tab-button"
+        data-site="gallerySite"
+      >
+        GALLERY
+      </button>
+
+      <button
+        type="button"
+        class="site-tab-button"
+        data-site="communitySite"
+      >
+        COMMUNITY
+      </button>
+    </div>
+
+    <!-- ALBUM -->
+    <section id="albumSite" class="site-panel active">
+
+      <div class="site-heading">
+        <h2>ALBUM</h2>
+        <p class="muted">Photo Book Management</p>
+      </div>
+
+      <!-- 第2階層：ALBUM内の管理機能 -->
+      <div class="function-tabs">
+        <button
+          type="button"
+          class="function-tab-button active"
+          data-function="commentsPanel"
+        >
+          コメント管理
+        </button>
+
+        <button
+          type="button"
+          class="function-tab-button"
+          data-function="likesPanel"
+        >
+          いいね管理
+        </button>
+      </div>
+
+      <!-- コメント管理 -->
+      <section id="commentsPanel" class="function-panel active">
+        <h2>コメント管理</h2>
+        <div id="comments"></div>
+      </section>
+
+      <!-- いいね管理 -->
+      <section id="likesPanel" class="function-panel">
+        <h2>いいね管理</h2>
+
+        <div class="likes-summary">
+          <h3>人気の写真</h3>
+          <p class="muted">いいね数の多い順</p>
+          <div id="likesRanking"></div>
+        </div>
+
+        <h3>すべての写真</h3>
+        <div id="likes"></div>
+      </section>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallerySite" class="site-panel">
+
+      <div class="site-heading">
+        <h2>GALLERY</h2>
+        <p class="muted">Photo Exhibition Management</p>
+      </div>
+
+      <!-- GALLERYの詳細機能は後から追加 -->
+      <section id="galleryPanel" class="function-panel active">
+
+        <div class="panel gallery-upload-panel">
+          <h3>写真を追加</h3>
+
+          <form id="galleryForm">
+            <label for="galleryFile">写真</label>
+            <input
+              id="galleryFile"
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+              required
+            >
+
+            <label for="galleryTitle">タイトル</label>
+            <input
+              id="galleryTitle"
+              type="text"
+              maxlength="100"
+              required
+            >
+
+            <label for="galleryDescription">説明</label>
+            <textarea
+              id="galleryDescription"
+              rows="4"
+            ></textarea>
+
+            <label for="galleryDate">撮影日</label>
+            <input id="galleryDate" type="date">
+
+            <label class="gallery-publish-label">
+              <input id="galleryPublish" type="checkbox">
+              公開する
+            </label>
+
+            <button type="submit" id="gallerySubmitButton">
+              写真を追加
+            </button>
+          </form>
+        </div>
+
+        <div class="gallery-list-section">
+          <h3>登録済みの写真</h3>
+          <div id="galleryPhotos"></div>
+        </div>
+
+      </section>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="communitySite" class="site-panel">
+
+      <div class="site-heading">
+        <h2>COMMUNITY</h2>
+        <p class="muted">Community Management</p>
+      </div>
+
+      <div class="function-tabs community-tabs">
+        <button type="button" class="function-tab-button active"
+          data-function="communityDashboardPanel">概要</button>
+        <button type="button" class="function-tab-button"
+          data-function="communityUsersPanel">ユーザー</button>
+        <button type="button" class="function-tab-button"
+          data-function="communityPostsPanel">投稿</button>
+        <button type="button" class="function-tab-button"
+          data-function="communityReportsPanel">通報</button>
+        <button type="button" class="function-tab-button"
+          data-function="communityLogsPanel">操作ログ</button>
+      </div>
+
+      <!-- 概要 -->
+      <section id="communityDashboardPanel"
+        class="function-panel active">
+
+        <h2>COMMUNITY OVERVIEW</h2>
+
+        <div class="community-stats">
+          <div class="community-stat">
+            <span>ユーザー数</span>
+            <strong id="communityUserCount">--</strong>
+          </div>
+
+          <div class="community-stat">
+            <span>投稿数</span>
+            <strong id="communityPostCount">--</strong>
+          </div>
+
+          <div class="community-stat">
+            <span>未対応通報</span>
+            <strong id="communityReportCount">--</strong>
+          </div>
+        </div>
+
+        <p class="muted" id="communityDashboardUpdated">
+          データを読み込んでください。
+        </p>
+      </section>
+
+      <!-- ユーザー管理 -->
+      <section id="communityUsersPanel" class="function-panel">
+        <h2>ユーザー管理</h2>
+
+        <input
+          id="communityUserSearch"
+          type="search"
+          placeholder="ユーザー名で検索"
+        >
+
+        <button type="button" id="communityUserSearchButton">
+          検索
+        </button>
+
+        <div id="communityUsers"></div>
+      </section>
+
+      <!-- 投稿管理 -->
+      <section id="communityPostsPanel" class="function-panel">
+        <h2>投稿管理</h2>
+
+        <input
+          id="communityPostSearch"
+          type="search"
+          placeholder="投稿内容・ユーザー名で検索"
+        >
+
+        <button type="button" id="communityPostSearchButton">
+          検索
+        </button>
+
+        <div id="communityPosts"></div>
+      </section>
+
+      <!-- 通報管理 -->
+      <section id="communityReportsPanel" class="function-panel">
+        <h2>通報管理</h2>
+
+        <select id="communityReportStatus">
+          <option value="pending">未対応</option>
+          <option value="reviewing">確認中</option>
+          <option value="resolved">対応済み</option>
+          <option value="rejected">対応不要</option>
+          <option value="">すべて</option>
+        </select>
+
+        <button type="button" id="communityReportSearchButton">
+          表示
+        </button>
+
+        <div id="communityReports"></div>
+      </section>
+
+      <!-- DM確認 -->
+      <section id="communityDmPanel" class="function-panel">
+        <h2>通報されたDM</h2>
+        <p class="muted">
+          通報に関連する会話のみ表示します。
+          確認操作は管理ログに記録されます。
+        </p>
+        <div id="communityReportedDm"></div>
+      </section>
+
+      <!-- 操作ログ -->
+      <section id="communityLogsPanel" class="function-panel">
+        <h2>管理者の操作ログ</h2>
+        <div id="communityLogs"></div>
+      </section>
+
+    </section>
+
+  </section>
+</main>
+
+<script src="admin.js" defer></script>
+</body>
+</html>
